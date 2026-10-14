@@ -62,19 +62,22 @@ The dataset contains historical sales records from **45 Walmart stores** across 
 
 ```mermaid
 flowchart TD
-    A[Raw Walmart Dataset (6,435 rows)] --> B[Data Preprocessing & Cleaning]
-    B --> C[Feature Engineering: Year, Week, Month, Temp_Bin]
-    C --> D[Exploratory Data Analysis (EDA)]
-    D --> D1[Macroeconomic Drivers: Unemployment & CPI]
-    D --> D2[Seasonality & Holiday Analysis]
-    D --> D3[Store Revenue Disparity: Top vs Bottom]
-    D --> D4[Correlation Matrix Analysis]
-    C --> E[Predictive Modeling & Forecasting]
-    E --> E1[Machine Learning: Random Forest Regressor]
-    E --> E2[Time Series Decomposition: Trend + Seasonal + Residual]
-    E --> E3[SARIMAX: (1,1,1) x (1,1,1,52)]
-    E --> E4[Facebook Prophet: 12-Week Forward Forecast]
-    E1 & E3 & E4 --> F[Synthesis & Business Recommendations]
+    A["Raw Walmart Dataset (6,435 rows)"] --> B["Data Preprocessing & Cleaning"]
+    B --> C["Feature Engineering: Year, Week, Month, Temp_Bin"]
+    C --> D["Exploratory Data Analysis (EDA)"]
+    D --> D1["Macroeconomic Drivers: Unemployment & CPI"]
+    D --> D2["Seasonality & Holiday Analysis"]
+    D --> D3["Store Revenue Disparity: Top vs Bottom"]
+    D --> D4["Correlation Matrix Analysis"]
+    C --> E["Predictive Modeling & Forecasting"]
+    E --> E1["Machine Learning: Random Forest Regressor"]
+    E --> E2["Time Series Decomposition: Trend + Seasonal + Residual"]
+    E --> E3["SARIMAX: (1,1,1) x (1,1,1,52)"]
+    E --> E4["Facebook Prophet: 12-Week Forward Forecast"]
+    E1 --> F["Synthesis & Business Recommendations"]
+    E2 --> F
+    E3 --> F
+    E4 --> F
 ```
 
 ---
